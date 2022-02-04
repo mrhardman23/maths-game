@@ -1,0 +1,53 @@
+@mixin flex {
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flex-direction($direction) {
+	@if $direction == column {
+		-moz-box-orient: vertical;
+		-webkit-box-orient: vertical;
+	} @else if $direction == row {
+		-moz-box-orient: horizontal;
+		-webkit-box-orient: horizontal;
+	}
+
+	-moz-box-direction: normal;
+	-webkit-box-direction: normal;
+	-ms-flex-direction: $direction;
+	-webkit-flex-direction: $direction;
+	flex-direction: $direction;
+}
+
+@mixin justify-content($alignment) {
+	@if $alignment == space-between {
+		-ms-flex-pack: justify;
+		-moz-box-pack: justify;
+		-webkit-box-pack: justify;
+	}
+
+	-webkit-justify-content: $alignment;
+	justify-content: $alignment;
+}
+
+@mixin align-self($alignment) {
+	-ms-flex-item-align: $alignment;
+	-ms-grid-row-align: $alignment;
+	-webkit-align-self: $alignment;
+	align-self: $alignment;
+}
+
+@mixin center-vertically {
+	position: relative;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+@mixin center-horizontally($position) {
+	position: $position;
+	left: 50%;
+	transform: translateX(-50%);
+}

@@ -1,0 +1,7 @@
+#score {
+	background-color: $score_bg_color;
+
+	@include align-self(flex-end);
+
+	padding: 10px;
+}

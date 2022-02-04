@@ -1,0 +1,33 @@
+p {
+	font-size: 20px;
+}
+
+#score {
+	color: $score_text_color;
+}
+
+#correct,
+#wrong {
+	color: $feedback_text_color;
+	text-align: center;
+}
+
+#question {
+	font-size: 96px;
+
+	font-family: Arial, Helvetica, sans-serif;
+
+	text-align: center;
+}
+
+#instructions {
+	font-size: 32px;
+	font-size: clamp(20px, 2vw, 32px);
+	text-align: center;
+}
+
+.answers {
+	box-sizing: border-box;
+	font-size: 48px;
+	font-size: clamp(20px, 4vw, 48px);
+}

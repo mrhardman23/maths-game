@@ -1,0 +1,13 @@
+#correct,
+#wrong {
+	@include center-horizontally(absolute);
+
+	display: none;
+
+	width: 25%;
+
+	top: 5px;
+	left: 50%;
+
+	padding: 10px;
+}

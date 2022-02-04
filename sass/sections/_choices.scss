@@ -1,0 +1,9 @@
+#choices {
+	@include flex;
+	@include flex-direction(row);
+	@include justify-content(space-between);
+	@include align-self(center);
+
+	width: calc(75% + 100px);
+	height: 10%;
+}
