@@ -1,3 +1,9 @@
+@mixin box-shadow($horizontal_offset, $vertical_offset, $color) {
+	-moz-box-shadow: $horizontal_offset $vertical_offset $color;
+	-webkit-box-shadow: $horizontal_offset $vertical_offset $color;
+	box-shadow: $horizontal_offset $vertical_offset $color;
+}
+
 @mixin flex {
 	display: -ms-flexbox;
 	display: -moz-box;
@@ -50,4 +56,19 @@
 	position: $position;
 	left: 50%;
 	transform: translateX(-50%);
+}
+
+@mixin transition($properties, $duration) {
+	$durations: [];
+
+	@for $properties from 1 through length($properties) {
+		$durations: append($durations, $duration, $separator: space);
+	}
+
+	$transition_value: zip($properties, $durations);
+
+	-o-transition: $transition_value;
+	-moz-transition: $transition_value;
+	-webkit-transition: $transition_value;
+	transition: $transition_value;
 }

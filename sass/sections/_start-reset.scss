@@ -1,0 +1,21 @@
+#start-reset {
+	@include flex;
+
+	@include flex-direction(row);
+
+	@include justify-content(center);
+}
+
+#start-button,
+#reset-button {
+	@include align-self(center);
+
+	background-color: $start_reset_bg_color;
+
+	margin-top: 15px;
+	padding: 20px;
+}
+
+#start-button {
+	margin-right: 15px;
+}

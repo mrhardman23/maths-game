@@ -1,12 +1,14 @@
 #instructions {
+	box-sizing: border-box;
+
 	@include align-self(center);
 
-	width: 75%;
-	height: 10%;
+	width: 90%;
 
+	margin: 15px 0;
 	padding: 20px 50px;
 
 	background-color: $instructions_bg_color;
 
-	box-shadow: 0px 4px $instructions_box_shadow;
+	@include box-shadow(0px, 4px, $instructions_box_shadow_color);
 }

@@ -1,4 +1,4 @@
-p {
+* {
 	font-size: 20px;
 }
 
@@ -27,7 +27,21 @@ p {
 }
 
 .answers {
-	box-sizing: border-box;
 	font-size: 48px;
 	font-size: clamp(20px, 4vw, 48px);
+
+	text-align: center;
+
+	line-height: 200%;
+	vertical-align: middle;
+}
+
+#start-button,
+#reset-button {
+	font-weight: bolder;
+}
+
+#time-left {
+	text-align: center;
+	word-break: break-all;
 }

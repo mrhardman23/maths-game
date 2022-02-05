@@ -1,0 +1,9 @@
+#user-game-info {
+	@include flex;
+	@include flex-direction(row);
+	@include justify-content(space-between);
+
+	align-items: center;
+
+	margin-bottom: 10px;
+}

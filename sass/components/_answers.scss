@@ -1,2 +1,5 @@
 .answers {
+	padding: clamp(10px, 3vw, 20px);
+
+	background-color: $answers_bg_color;
 }

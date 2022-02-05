@@ -1,0 +1,14 @@
+#time-left {
+	margin: 0;
+	padding: 10px 5px;
+
+	width: 100px;
+
+	border-radius: 2px;
+
+	@include box-shadow(0px, 4px, $time_left_box_shadow_color);
+
+	background-color: $time_left_bg_color;
+
+	visibility: hidden;
+}

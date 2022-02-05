@@ -15,19 +15,31 @@
 	</head>
 	<body>
 		<main id="container">
-			<p id="score">
-				Score:
-				<span id="score-value" aria-live="polite">0</span>
-			</p>
+			<div id="user-game-info">
+				<p id="time-left">
+					Time Left:
+					<span id="time-left-in-seconds" aria-live="polite">
+						60 seconds
+					</span>
+				</p>
+				<p id="score">
+					Score:
+					<span id="score-value" aria-live="polite">0</span>
+				</p>
+			</div>
 			<p id="correct" aria-hidden="true">Correct</p>
 			<p id="wrong" aria-hidden="true">Try Again</p>
 			<p id="question" aria-live="polite">7 x 9</p>
 			<p id="instructions">Click on the correct answer!</p>
 			<div id="choices">
+				<button class="answers" aria-live="polite">Lorem</button>
 				<button class="answers">Lorem</button>
 				<button class="answers">Lorem</button>
 				<button class="answers">Lorem</button>
-				<button class="answers">Lorem</button>
+			</div>
+			<div id="start-reset">
+				<button id="start-button">Start Game</button>
+				<button id="reset-button">Reset Game</button>
 			</div>
 		</main>
 	</body>
