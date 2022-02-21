@@ -1,5 +1,5 @@
 * {
-  font-size: 20px;
+  font-size: 1.8vw;
 }
 
 #score {
@@ -13,23 +13,19 @@
 }
 
 #question {
-  font-size: 96px;
+  font-size: 7.2vw;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 #instructions {
-  font-size: 32px;
-  font-size: clamp(20px, 2vw, 32px);
+  font-size: 2.16vw;
   text-align: center;
 }
 
 .answers {
-  font-size: 48px;
-  font-size: clamp(20px, 4vw, 48px);
+  font-size: 2.2vw;
   text-align: center;
-  line-height: 200%;
-  vertical-align: middle;
 }
 
 #start-button,
@@ -49,6 +45,16 @@ html {
 
 body {
   position: relative;
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  justify-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100vh;
   margin: 0;
 }
@@ -95,12 +101,6 @@ body {
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
   justify-content: space-between;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  -webkit-align-self: center;
-  align-self: center;
-  width: calc(75% + 100px);
-  height: 10%;
 }
 
 #start-reset {
@@ -123,12 +123,12 @@ body {
   -webkit-align-self: center;
   align-self: center;
   background-color: rgba(255, 255, 255, 0.5);
-  margin-top: 15px;
-  padding: 20px;
+  margin-top: 2vh;
+  padding: 2vw;
 }
 
 #start-button {
-  margin-right: 15px;
+  margin-right: 0.4vw;
 }
 
 #container {
@@ -139,12 +139,7 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  margin: 0 5%;
   padding: 10px 20px;
-  position: relative;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
   background-color: #9dd2ea;
   border-radius: 10px;
   -webkit-box-shadow: 0px 4px #009de4;
@@ -196,8 +191,9 @@ body {
 }
 
 .answers {
-  padding: clamp(10px, 3vw, 20px);
   background-color: ghostwhite;
+  margin: 0.5vh 0.5vw;
+  padding: 1vh 1vw;
 }
 
 #time-left {
