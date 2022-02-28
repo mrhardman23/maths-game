@@ -12,10 +12,19 @@
     background-color: $start_reset_bg_color;
 
     margin: 2vh 0;
-    padding: 2vw;
+    padding: 10px;
   }
 
   #start-button {
     margin-right: 0.4vw;
+  }
+}
+
+@media all and (min-height: 600px) {
+  #start-reset {
+    #start-button,
+    #reset-button {
+      padding: 2vw;
+    }
   }
 }
