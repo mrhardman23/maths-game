@@ -1,5 +1,5 @@
 * {
-  font-size: 1.8vw;
+  font-size: 16px;
 }
 
 #score {
@@ -13,18 +13,18 @@
 }
 
 #question {
-  font-size: 7.2vw;
+  font-size: 64px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 #instructions {
-  font-size: 2.16vw;
+  font-size: 28px;
   text-align: center;
 }
 
 .answers {
-  font-size: 2.2vw;
+  font-size: 24px;
   text-align: center;
 }
 
@@ -36,6 +36,21 @@
 #time-left {
   text-align: center;
   word-break: break-all;
+}
+
+@media all and (min-width: 700px) {
+  * {
+    font-size: 20px;
+  }
+  #question {
+    font-size: 96px;
+  }
+  #instructions {
+    font-size: 40px;
+  }
+  .answers {
+    font-size: 32px;
+  }
 }
 
 html {
@@ -94,13 +109,28 @@ body {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
-  -webkit-box-orient: horizontal;
+  -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: row;
-  flex-direction: row;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -ms-flex-pack: justify;
   -webkit-box-pack: justify;
   justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media all and (min-width: 700px) {
+  #choices {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
 }
 
 #start-reset {
@@ -139,17 +169,29 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 10px 20px;
+  padding: 10px 5px;
   background-color: #9dd2ea;
   border-radius: 10px;
   -webkit-box-shadow: 0px 4px #009de4;
   box-shadow: 0px 4px #009de4;
 }
 
+@media all and (min-width: 700px) {
+  #container {
+    padding: 10px 20px;
+  }
+}
+
 #score {
   background-color: #f1ff92;
   margin: 0;
-  padding: 10px;
+  padding: 5px;
+}
+
+@media all and (min-width: 700px) {
+  #score {
+    padding: 10px;
+  }
 }
 
 #correct {
@@ -191,9 +233,16 @@ body {
 }
 
 .answers {
+  width: 50%;
   background-color: ghostwhite;
   margin: 0.5vh 0.5vw;
   padding: 1vh 1vw;
+}
+
+@media all and (min-width: 700px) {
+  .answers {
+    width: 100%;
+  }
 }
 
 #time-left {

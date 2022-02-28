@@ -1,5 +1,15 @@
 #choices {
   @include flex;
-  @include flex-direction(row);
+  @include flex-direction(column);
   @include justify-content(space-between);
+
+  align-items: center;
+}
+
+@media all and (min-width: 700px) {
+  #choices {
+    @include flex-direction(row);
+
+    align-items: stretch;
+  }
 }
