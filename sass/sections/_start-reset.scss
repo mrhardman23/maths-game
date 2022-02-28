@@ -4,18 +4,18 @@
   @include flex-direction(row);
 
   @include justify-content(center);
-}
 
-#start-button,
-#reset-button {
-  @include align-self(center);
+  #start-button,
+  #reset-button {
+    @include align-self(center);
 
-  background-color: $start_reset_bg_color;
+    background-color: $start_reset_bg_color;
 
-  margin-top: 2vh;
-  padding: 2vw;
-}
+    margin: 2vh 0;
+    padding: 2vw;
+  }
 
-#start-button {
-  margin-right: 0.4vw;
+  #start-button {
+    margin-right: 0.4vw;
+  }
 }

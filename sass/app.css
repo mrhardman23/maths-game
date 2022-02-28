@@ -1,5 +1,5 @@
 * {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #score {
@@ -13,18 +13,18 @@
 }
 
 #question {
-  font-size: 64px;
+  font-size: 50px;
   font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 #instructions {
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
 }
 
 .answers {
-  font-size: 24px;
+  font-size: 20px;
   text-align: center;
 }
 
@@ -38,7 +38,22 @@
   word-break: break-all;
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-height: 600px) {
+  * {
+    font-size: 16px;
+  }
+  #question {
+    font-size: 64px;
+  }
+  #instructions {
+    font-size: 28px;
+  }
+  .answers {
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width: 700px) and (min-height: 600px) {
   * {
     font-size: 20px;
   }
@@ -58,8 +73,10 @@ html {
   background: radial-gradient(circle, #fff, #ccc);
 }
 
-body {
+html body {
   position: relative;
+  height: 100vh;
+  margin: 0;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -70,8 +87,6 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 100vh;
-  margin: 0;
 }
 
 #user-game-info {
@@ -146,18 +161,18 @@ body {
           justify-content: center;
 }
 
-#start-button,
-#reset-button {
+#start-reset #start-button,
+#start-reset #reset-button {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   -webkit-align-self: center;
   align-self: center;
   background-color: rgba(255, 255, 255, 0.5);
-  margin-top: 2vh;
+  margin: 2vh 0;
   padding: 2vw;
 }
 
-#start-button {
+#start-reset #start-button {
   margin-right: 0.4vw;
 }
 
@@ -169,14 +184,20 @@ body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 10px 5px;
+  padding: 0px 5px;
   background-color: #9dd2ea;
   border-radius: 10px;
   -webkit-box-shadow: 0px 4px #009de4;
   box-shadow: 0px 4px #009de4;
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-height: 600px) {
+  #container {
+    padding: 10px 5px;
+  }
+}
+
+@media all and (min-width: 700px) and (min-height: 600px) {
   #container {
     padding: 10px 20px;
   }
@@ -211,10 +232,16 @@ body {
   align-self: center;
   width: 90%;
   margin: 0;
-  padding: 25px;
+  padding: 10px;
   background-color: #9da0ea;
   -webkit-box-shadow: 0px 4px #535aa8;
   box-shadow: 0px 4px #535aa8;
+}
+
+@media all and (min-height: 600px) {
+  #question {
+    padding: 25px;
+  }
 }
 
 #instructions {
@@ -226,10 +253,16 @@ body {
   align-self: center;
   width: 90%;
   margin: 15px 0;
-  padding: 20px 50px;
+  padding: 10px 25px;
   background-color: #b481d9;
   -webkit-box-shadow: 0px 4px #8153a8;
   box-shadow: 0px 4px #8153a8;
+}
+
+@media all and (min-height: 600px) {
+  #question {
+    padding: 20px 50px;
+  }
 }
 
 .answers {

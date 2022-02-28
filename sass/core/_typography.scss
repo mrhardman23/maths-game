@@ -1,5 +1,5 @@
 * {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 #score {
@@ -13,7 +13,7 @@
 }
 
 #question {
-  font-size: 64px;
+  font-size: 50px;
 
   font-family: Arial, Helvetica, sans-serif;
 
@@ -21,12 +21,12 @@
 }
 
 #instructions {
-  font-size: 28px;
+  font-size: 24px;
   text-align: center;
 }
 
 .answers {
-  font-size: 24px;
+  font-size: 20px;
 
   text-align: center;
 }
@@ -41,7 +41,25 @@
   word-break: break-all;
 }
 
-@media all and (min-width: 700px) {
+@media all and (min-height: 600px) {
+  * {
+    font-size: 16px;
+  }
+
+  #question {
+    font-size: 64px;
+  }
+
+  #instructions {
+    font-size: 28px;
+  }
+
+  .answers {
+    font-size: 24px;
+  }
+}
+
+@media all and (min-width: 700px) and (min-height: 600px) {
   * {
     font-size: 20px;
   }
