@@ -173,13 +173,20 @@ html body {
 }
 
 #start-reset #start-button {
-  margin-right: 0.4vw;
+  margin-right: 2vw;
 }
 
 @media all and (min-height: 600px) {
   #start-reset #start-button,
   #start-reset #reset-button {
     padding: 2vw;
+  }
+}
+
+@media all and (min-width: 700px) {
+  #start-reset #start-button,
+  #start-reset #reset-button {
+    margin-right: 0.4vw;
   }
 }
 
