@@ -213,16 +213,10 @@ html body {
 #score {
   background-color: #f1ff92;
   margin: 0;
-  padding: 2px;
+  padding: 5px;
 }
 
-@media all and (min-height: 600px) {
-  #score {
-    padding: 5px;
-  }
-}
-
-@media all and (min-width: 700px) and (min-height: 600px) {
+@media all and (min-width: 700px) {
   #score {
     padding: 10px;
   }
