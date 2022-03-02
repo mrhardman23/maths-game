@@ -1,0 +1,21 @@
+#game-over {
+  position: absolute;
+
+  @include center-horizontally-and-vertically(-50%, -50%);
+
+  @include flex;
+  @include flex-direction(column);
+  @include justify-content(center);
+
+  @include linear-gradient-background(
+    ($game_over_gradient_color_1, $game_over_gradient_color_2)
+  );
+
+  text-align: center;
+
+  padding: 30px 60px;
+
+  p {
+    margin: 10px;
+  }
+}

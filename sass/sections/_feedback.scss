@@ -1,14 +1,16 @@
 #correct,
 #wrong {
-	@include center-horizontally(absolute);
+  position: absolute;
 
-	display: none;
+  @include center-horizontally-and-vertically(-50%, 0%);
 
-	width: 25%;
+  display: none;
 
-	top: 22px;
-	left: 50%;
+  width: 25%;
 
-	margin: 0;
-	padding: 10px;
+  top: 22px;
+  left: 50%;
+
+  margin: 0;
+  padding: 10px;
 }

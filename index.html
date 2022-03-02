@@ -14,30 +14,52 @@
     <link rel="stylesheet" href="sass/app.css" />
   </head>
   <body>
+    <header
+      style="position: absolute; top: 10px; margin: 0 5%; text-align: center"
+    >
+      <p class="explanation-paragraphs" id="game-explanation">
+        Below is a multiplication game where you have 60 seconds to answer as
+        many multiplication questions as you can.
+      </p>
+      <p class="explanation-paragraphs" id="button-instructions">
+        You will use the four buttons that display numbers to choose the answer
+        to the multiplication question.
+      </p>
+      <p class="explanation-paragraphs" id="how-to-start">
+        When you are ready, select the Start Game button near the bottom of the
+        website.
+      </p>
+    </header>
     <main id="container">
       <div id="user-game-info">
-        <p id="time-left">
+        <p id="time-left" aria-hidden="true">
           Time Left:
-          <span id="time-left-in-seconds" aria-live="polite"> 60 seconds </span>
+          <span id="time-left-in-seconds"> 60 seconds </span>
         </p>
         <p id="score">
           Score:
-          <span id="score-value" aria-live="polite">0</span>
+          <span class="score-value">0</span>
         </p>
       </div>
       <p id="correct" aria-hidden="true">Correct</p>
       <p id="wrong" aria-hidden="true">Try Again</p>
-      <p id="question" aria-live="polite">7 x 9</p>
+      <p id="question" aria-live="polite">Question</p>
       <p id="instructions">Click on the correct answer!</p>
       <div id="choices">
-        <button class="answers" aria-live="polite">Lorem</button>
-        <button class="answers" aria-live="polite">Lorem</button>
-        <button class="answers" aria-live="polite">Lorem</button>
-        <button class="answers" aria-live="polite">Lorem</button>
+        <button class="answers" id="answer-1">Answer 1</button>
+        <button class="answers" id="answer-2">Answer 2</button>
+        <button class="answers" id="answer-3">Answer 3</button>
+        <button class="answers" id="answer-4">Answer 4</button>
       </div>
-      <div id="start-reset">
+      <div id="start-reset-buttons">
         <button id="start-button">Start Game</button>
         <button id="reset-button">Reset Game</button>
+      </div>
+      <div id="game-over" aria-hidden="true">
+        <p id="game-over-title">Game Over!</p>
+        <p id="game-over-score">
+          Your Score is <span class="score-value">0</span>.
+        </p>
       </div>
     </main>
   </body>

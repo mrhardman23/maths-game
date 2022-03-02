@@ -7,7 +7,7 @@
 @import "sections/user-game-info";
 @import "sections/feedback";
 @import "sections/choices";
-@import "sections/start-reset";
+@import "sections/start-reset-buttons";
 
 @import "components/container";
 @import "components/score";
@@ -17,3 +17,4 @@
 @import "components/instructions";
 @import "components/answers";
 @import "components/time-left";
+@import "components/game-over";

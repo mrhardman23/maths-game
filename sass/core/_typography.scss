@@ -1,27 +1,39 @@
 * {
   font-size: 12px;
+
+  font-family: Arial, Helvetica, Verdana, sans-serif;
 }
 
 #score {
   color: $score_text_color;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
+  .score-value {
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
 }
 
 #correct,
 #wrong {
   color: $feedback_text_color;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
   text-align: center;
 }
 
 #question {
   font-size: 50px;
 
-  font-family: Arial, Helvetica, sans-serif;
-
   text-align: center;
 }
 
 #instructions {
   font-size: 20px;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
   text-align: center;
 }
 
@@ -38,7 +50,32 @@
 
 #time-left {
   text-align: center;
+
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+
   word-break: break-all;
+}
+
+#game-over {
+  color: $feedback_text_color;
+
+  font-weight: bold;
+
+  // Code for text outline sourced from https://css-tricks.com/adding-stroke-to-web-text/
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000,
+    1px 1px 0 #000;
+
+  p {
+    font-size: 50px;
+
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
+
+  .score-value {
+    font-size: 50px;
+
+    font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  }
 }
 
 @media all and (min-height: 600px) {
@@ -57,6 +94,16 @@
   .answers {
     font-size: 24px;
   }
+
+  #game-over {
+    p {
+      font-size: 64px;
+    }
+
+    .score-value {
+      font-size: 64px;
+    }
+  }
 }
 
 @media all and (min-width: 700px) and (min-height: 600px) {
@@ -74,5 +121,15 @@
 
   .answers {
     font-size: 32px;
+  }
+
+  #game-over {
+    p {
+      font-size: 96px;
+    }
+
+    .score-value {
+      font-size: 96px;
+    }
   }
 }

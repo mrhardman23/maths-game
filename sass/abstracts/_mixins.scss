@@ -46,16 +46,20 @@
   align-self: $alignment;
 }
 
-@mixin center-vertically {
-  position: relative;
-  top: 50%;
-  transform: translateY(-50%);
-}
+@mixin center-horizontally-and-vertically($x_percent, $y_percent) {
+  @if $x_percent == -50% {
+    left: 50%;
+  }
 
-@mixin center-horizontally($position) {
-  position: $position;
-  left: 50%;
-  transform: translateX(-50%);
+  @if $y_percent == -50% {
+    top: 50%;
+  }
+
+  -ms-transform: translate($x_percent, $y_percent);
+  -o-transform: translate($x_percent, $y_percent);
+  -moz-transform: translate($x_percent, $y_percent);
+  -webkit-transform: translate($x_percent, $y_percent);
+  transform: translate($x_percent, $y_percent);
 }
 
 @mixin transition($properties, $duration) {
@@ -71,4 +75,17 @@
   -moz-transition: $transition_value;
   -webkit-transition: $transition_value;
   transition: $transition_value;
+}
+
+@mixin linear-gradient-background($colors) {
+  $colors_list: null;
+
+  @each $color in $colors {
+    $colors_list: append($colors_list, $color, $separator: comma);
+  }
+
+  background: -o-linear-gradient($colors_list);
+  background: -moz-linear-gradient($colors_list);
+  background: -webkit-linear-gradient($colors_list);
+  background: linear-gradient($colors_list);
 }

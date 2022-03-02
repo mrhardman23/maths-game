@@ -1,25 +1,32 @@
 * {
   font-size: 12px;
+  font-family: Arial, Helvetica, Verdana, sans-serif;
 }
 
 #score {
-  color: #888e5f;
+  color: #4c5035;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#score .score-value {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 #correct,
 #wrong {
   color: ghostwhite;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
 }
 
 #question {
   font-size: 50px;
-  font-family: Arial, Helvetica, sans-serif;
   text-align: center;
 }
 
 #instructions {
   font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   text-align: center;
 }
 
@@ -35,7 +42,24 @@
 
 #time-left {
   text-align: center;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   word-break: break-all;
+}
+
+#game-over {
+  color: ghostwhite;
+  font-weight: bold;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+#game-over p {
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+#game-over .score-value {
+  font-size: 50px;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 @media all and (min-height: 600px) {
@@ -51,6 +75,12 @@
   .answers {
     font-size: 24px;
   }
+  #game-over p {
+    font-size: 64px;
+  }
+  #game-over .score-value {
+    font-size: 64px;
+  }
 }
 
 @media all and (min-width: 700px) and (min-height: 600px) {
@@ -65,6 +95,12 @@
   }
   .answers {
     font-size: 32px;
+  }
+  #game-over p {
+    font-size: 96px;
+  }
+  #game-over .score-value {
+    font-size: 96px;
   }
 }
 
@@ -110,8 +146,8 @@ html body {
 #wrong {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
   display: none;
   width: 25%;
   top: 22px;
@@ -148,7 +184,7 @@ html body {
   }
 }
 
-#start-reset {
+#start-reset-buttons {
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -161,8 +197,8 @@ html body {
           justify-content: center;
 }
 
-#start-reset #start-button,
-#start-reset #reset-button {
+#start-reset-buttons #start-button,
+#start-reset-buttons #reset-button {
   -ms-flex-item-align: center;
   -ms-grid-row-align: center;
   -webkit-align-self: center;
@@ -172,13 +208,13 @@ html body {
   padding: 10px;
 }
 
-#start-reset #start-button {
+#start-reset-buttons #start-button {
   margin-right: 4vw;
 }
 
 @media all and (min-height: 600px) {
-  #start-reset #start-button,
-  #start-reset #reset-button {
+  #start-reset-buttons #start-button,
+  #start-reset-buttons #reset-button {
     padding: 2vw;
   }
 }
@@ -211,6 +247,8 @@ html body {
 }
 
 #score {
+  position: relative;
+  right: 0;
   background-color: #f1ff92;
   margin: 0;
   padding: 5px;
@@ -300,4 +338,30 @@ html body {
   #time-left {
     padding: 10px 5px;
   }
+}
+
+#game-over {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  display: -ms-flexbox;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left top, left bottom, from(#f12711), to(#f5af19));
+  background: linear-gradient(#f12711, #f5af19);
+  text-align: center;
+  padding: 30px 60px;
+}
+
+#game-over p {
+  margin: 10px;
 }

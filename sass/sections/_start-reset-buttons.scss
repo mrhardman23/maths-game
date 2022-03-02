@@ -1,4 +1,4 @@
-#start-reset {
+#start-reset-buttons {
   @include flex;
 
   @include flex-direction(row);
@@ -21,7 +21,7 @@
 }
 
 @media all and (min-height: 600px) {
-  #start-reset {
+  #start-reset-buttons {
     #start-button,
     #reset-button {
       padding: 2vw;
