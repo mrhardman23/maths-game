@@ -1,10 +1,11 @@
 * {
   font-size: 12px;
+  color: #121212;
   font-family: Arial, Helvetica, Verdana, sans-serif;
 }
 
 #score {
-  color: #4c5035;
+  color: #0A0A0A;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -49,16 +50,16 @@
 #game-over {
   color: ghostwhite;
   font-weight: bold;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #game-over p {
-  font-size: 50px;
+  font-size: 44px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
 #game-over .score-value {
-  font-size: 50px;
+  font-size: 44px;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 }
 
@@ -76,10 +77,10 @@
     font-size: 24px;
   }
   #game-over p {
-    font-size: 64px;
+    font-size: 56px;
   }
   #game-over .score-value {
-    font-size: 64px;
+    font-size: 56px;
   }
 }
 
@@ -97,25 +98,27 @@
     font-size: 32px;
   }
   #game-over p {
-    font-size: 96px;
+    font-size: 84px;
   }
   #game-over .score-value {
-    font-size: 96px;
+    font-size: 84px;
   }
 }
 
 html {
-  height: 100vh;
   background: radial-gradient(circle, #fff, #ccc);
 }
 
 html body {
   position: relative;
-  height: 100vh;
   margin: 0;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -220,6 +223,7 @@ html body {
 }
 
 #container {
+  position: relative;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -227,9 +231,10 @@ html body {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
-  padding: 0px 5px;
+  margin-bottom: 5%;
   background-color: #9dd2ea;
   border-radius: 10px;
+  padding: 0px 5px;
   -webkit-box-shadow: 0px 4px #009de4;
   box-shadow: 0px 4px #009de4;
 }
@@ -246,10 +251,43 @@ html body {
   }
 }
 
+.answers,
+#start-reset-buttons #start-button,
+#start-reset-buttons #reset-button {
+  -webkit-box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px rgba(0, 0, 0, 0.2);
+  -webkit-transition: background-color 0.5s, color 0.5s, box-shadow 0.5s, top 0.5s;
+  -webkit-transition: background-color 0.5s, color 0.5s, top 0.5s, -webkit-box-shadow 0.5s;
+  transition: background-color 0.5s, color 0.5s, top 0.5s, -webkit-box-shadow 0.5s;
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.5s, top 0.5s;
+  transition: background-color 0.5s, color 0.5s, box-shadow 0.5s, top 0.5s, -webkit-box-shadow 0.5s;
+}
+
+.answers:hover, .answers:focus,
+#start-reset-buttons #start-button:hover,
+#start-reset-buttons #start-button:focus,
+#start-reset-buttons #reset-button:hover,
+#start-reset-buttons #reset-button:focus {
+  background-color: #9c89f6;
+  color: ghostwhite;
+  -webkit-box-shadow: 0px 4px #6b54d3;
+  box-shadow: 0px 4px #6b54d3;
+}
+
+.answers:active,
+#start-reset-buttons #start-button:active,
+#start-reset-buttons #reset-button:active {
+  top: 4px;
+  background-color: #9c89f6;
+  color: ghostwhite;
+  -webkit-box-shadow: 0px 0px #6b54d3;
+  box-shadow: 0px 0px #6b54d3;
+}
+
 #score {
   position: relative;
   right: 0;
-  background-color: #f1ff92;
+  background-color: #ffeea3;
   margin: 0;
   padding: 5px;
 }
@@ -343,9 +381,9 @@ html body {
 #game-over {
   position: absolute;
   left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50.5%);
+  transform: translate(-50%, -50.5%);
+  visibility: hidden;
   display: -ms-flexbox;
   display: -webkit-box;
   display: flex;
@@ -356,12 +394,23 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: -webkit-gradient(linear, left top, left bottom, from(#f12711), to(#f5af19));
-  background: linear-gradient(#f12711, #f5af19);
+  width: 80%;
+  background: -webkit-gradient(linear, left top, left bottom, from(#F7971E), to(#FFD200));
+  background: linear-gradient(#F7971E, #FFD200);
   text-align: center;
-  padding: 30px 60px;
+  padding: 30px 50px;
 }
 
 #game-over p {
   margin: 10px;
+}
+
+header {
+  margin: 5%;
+  border-radius: 10px;
+  padding: 0 10px;
+  background-color: #9dd2ea;
+  -webkit-box-shadow: 0px 4px #009de4;
+  box-shadow: 0px 4px #009de4;
+  text-align: center;
 }

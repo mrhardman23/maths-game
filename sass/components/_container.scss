@@ -1,12 +1,16 @@
 #container {
+  position: relative;
+
   @include flex;
 
   @include flex-direction(column);
 
-  padding: 0px 5px;
+  margin-bottom: 5%;
 
   background-color: $container_bg_color;
   border-radius: 10px;
+
+  padding: 0px 5px;
 
   @include box-shadow(0px, 4px, $container_box_shadow_color);
 }

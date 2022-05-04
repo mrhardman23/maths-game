@@ -1,11 +1,15 @@
 #game-over {
   position: absolute;
 
-  @include center-horizontally-and-vertically(-50%, -50%);
+  @include center-horizontally-and-vertically(-50%, -50.5%);
+
+  visibility: hidden;
 
   @include flex;
   @include flex-direction(column);
   @include justify-content(center);
+
+  width: 80%;
 
   @include linear-gradient-background(
     ($game_over_gradient_color_1, $game_over_gradient_color_2)
@@ -13,7 +17,7 @@
 
   text-align: center;
 
-  padding: 30px 60px;
+  padding: 30px 50px;
 
   p {
     margin: 10px;

@@ -1,15 +1,13 @@
 html {
-  height: 100vh;
   background: radial-gradient(circle, #fff, #ccc);
 
   body {
     position: relative;
 
-    height: 100vh;
-
     margin: 0;
 
     @include flex;
+    @include flex-direction(column);
     @include justify-content(center);
     justify-items: center;
     align-items: center;

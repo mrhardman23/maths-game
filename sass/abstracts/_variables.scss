@@ -1,8 +1,10 @@
+$default_text_color: #121212;
+
 $container_bg_color: #9dd2ea;
 $container_box_shadow_color: #009de4;
 
-$score_bg_color: #f1ff92;
-$score_text_color: #4c5035;
+$score_bg_color: #ffeea3;
+$score_text_color: #0A0A0A;
 
 $correct_bg_color: #42e252;
 
@@ -26,5 +28,5 @@ $start_reset_bg_color: rgba(255, 255, 255, 0.5);
 $time_left_bg_color: rgba(181, 235, 36, 0.7);
 $time_left_box_shadow_color: rgba(0, 0, 0, 0.2);
 
-$game_over_gradient_color_1: #f12711;
-$game_over_gradient_color_2: #f5af19;
+$game_over_gradient_color_1: #F7971E;
+$game_over_gradient_color_2: #FFD200;
