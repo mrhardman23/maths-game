@@ -21,7 +21,8 @@
       </p>
       <p class="explanation-paragraphs" id="button-instructions">
         You will use the four buttons that display numbers to choose the answer
-        to the multiplication question.
+        to the multiplication question. If you get a correct answer, the app 
+        will notify you by giving you a new question.
       </p>
       <p class="explanation-paragraphs" id="how-to-start">
         When you are ready, select the Start Game button near the bottom of the
@@ -31,7 +32,7 @@
     <main id="container">
       <div id="user-game-info">
         <p id="time-left" aria-hidden="true">
-          Time Left: 
+          Time Left: <br />
           <span id="time-left-in-seconds">60</span> seconds
         </p>
         <p id="score">
@@ -39,25 +40,24 @@
           <span class="score-value">0</span>
         </p>
       </div>
-      <p id="correct" aria-hidden="true">Correct</p>
-      <p id="wrong" aria-hidden="true">Try Again</p>
-      <p id="question" aria-live="polite">Question</p>
-      <p id="instructions">Click on the correct answer!</p>
+      <p id="correct" tabindex="0">Correct</p>
+      <p id="wrong" tabindex="0">Try Again</p>
+      <p id="question" aria-live="assertive" tabindex="0">Question</p>
       <div id="choices">
         <button class="answers" id="answer-1">Answer 1</button>
         <button class="answers" id="answer-2">Answer 2</button>
         <button class="answers" id="answer-3">Answer 3</button>
         <button class="answers" id="answer-4">Answer 4</button>
       </div>
-      <div id="start-reset-buttons">
-        <button id="start-button">Start Game</button>
-        <button id="reset-button">Reset Game</button>
-      </div>
-      <div id="game-over" aria-hidden="true">
+      <div id="game-over" tabindex="0">
         <p id="game-over-title">Game Over!</p>
         <p id="game-over-score">
           Your Score is <span class="score-value">0</span>.
         </p>
+      </div>
+      <div id="start-reset-buttons">
+        <button id="start-button">Start Game</button>
+        <button id="reset-button">Reset Game</button>
       </div>
     </main>
     <script src="scripts/math-logic.js"></script>

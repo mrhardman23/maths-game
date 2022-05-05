@@ -25,12 +25,6 @@
   text-align: center;
 }
 
-#instructions {
-  font-size: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  text-align: center;
-}
-
 .answers {
   font-size: 18px;
   text-align: center;
@@ -44,13 +38,12 @@
 #time-left {
   text-align: center;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  word-break: break-all;
 }
 
 #game-over {
   color: ghostwhite;
   font-weight: bold;
-  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
 #game-over p {
@@ -70,17 +63,14 @@
   #question {
     font-size: 64px;
   }
-  #instructions {
-    font-size: 28px;
-  }
   .answers {
     font-size: 24px;
   }
   #game-over p {
-    font-size: 56px;
+    font-size: 48px;
   }
   #game-over .score-value {
-    font-size: 56px;
+    font-size: 48px;
   }
 }
 
@@ -91,17 +81,14 @@
   #question {
     font-size: 96px;
   }
-  #instructions {
-    font-size: 40px;
-  }
   .answers {
     font-size: 32px;
   }
   #game-over p {
-    font-size: 84px;
+    font-size: 56px;
   }
   #game-over .score-value {
-    font-size: 84px;
+    font-size: 56px;
   }
 }
 
@@ -314,7 +301,7 @@ html body {
   -webkit-align-self: center;
   align-self: center;
   width: 90%;
-  margin: 0;
+  margin: 0 0 20px;
   padding: 10px;
   background-color: #9da0ea;
   -webkit-box-shadow: 0px 4px #535aa8;
@@ -324,27 +311,6 @@ html body {
 @media all and (min-height: 600px) {
   #question {
     padding: 25px;
-  }
-}
-
-#instructions {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -ms-flex-item-align: center;
-  -ms-grid-row-align: center;
-  -webkit-align-self: center;
-  align-self: center;
-  width: 90%;
-  margin: 15px 0;
-  padding: 10px 25px;
-  background-color: #b481d9;
-  -webkit-box-shadow: 0px 4px #8153a8;
-  box-shadow: 0px 4px #8153a8;
-}
-
-@media all and (min-height: 600px) {
-  #question {
-    padding: 20px 50px;
   }
 }
 
@@ -381,8 +347,9 @@ html body {
 #game-over {
   position: absolute;
   left: 50%;
-  -webkit-transform: translate(-50%, -50.5%);
-  transform: translate(-50%, -50.5%);
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   visibility: hidden;
   display: -ms-flexbox;
   display: -webkit-box;
@@ -394,7 +361,7 @@ html body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 80%;
+  width: 95%;
   background: -webkit-gradient(linear, left top, left bottom, from(#F7971E), to(#FFD200));
   background: linear-gradient(#F7971E, #FFD200);
   text-align: center;

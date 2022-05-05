@@ -31,14 +31,6 @@
   text-align: center;
 }
 
-#instructions {
-  font-size: 20px;
-
-  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-
-  text-align: center;
-}
-
 .answers {
   font-size: 18px;
 
@@ -55,7 +47,6 @@
 
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
 
-  word-break: break-all;
 }
 
 #game-over {
@@ -89,21 +80,17 @@
     font-size: 64px;
   }
 
-  #instructions {
-    font-size: 28px;
-  }
-
   .answers {
     font-size: 24px;
   }
 
   #game-over {
     p {
-      font-size: 56px;
+      font-size: 48px;
     }
 
     .score-value {
-      font-size: 56px;
+      font-size: 48px;
     }
   }
 }
@@ -117,21 +104,17 @@
     font-size: 96px;
   }
 
-  #instructions {
-    font-size: 40px;
-  }
-
   .answers {
     font-size: 32px;
   }
 
   #game-over {
     p {
-      font-size: 84px;
+      font-size: 56px;
     }
 
     .score-value {
-      font-size: 84px;
+      font-size: 56px;
     }
   }
 }

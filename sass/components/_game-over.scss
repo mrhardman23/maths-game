@@ -1,7 +1,7 @@
 #game-over {
   position: absolute;
 
-  @include center-horizontally-and-vertically(-50%, -50.5%);
+  @include center-horizontally-and-vertically(-50%, -50%);
 
   visibility: hidden;
 
@@ -9,7 +9,7 @@
   @include flex-direction(column);
   @include justify-content(center);
 
-  width: 80%;
+  width: 95%;
 
   @include linear-gradient-background(
     ($game_over_gradient_color_1, $game_over_gradient_color_2)
